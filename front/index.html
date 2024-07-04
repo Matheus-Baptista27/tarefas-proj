@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login tarefa</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/global.css">
+    
+</head>
+<body class="centralize">
+    <form>
+        <div class="form-field">
+            <div><label>Email</label></div>
+            <input type="email" name="email" id="email" onchange="onChangeEmail()" placeholder="seu@email.com">
+            <div class="error" id="email-required-error">Email é obrigatório</div>
+            <div class="error" id="email-invalid-error">Email é inválido</div>
+        </div>
+        <div class="form-field">
+            <div><label>Senha</label></div>
+            <input type="password" name="password" id="password" onchange="onChangePassword()" placeholder="Senha">
+            <div class="error" id="password-required-error">Senha é obrigatória</div>
+            
+        </div>
+        <div>
+            <button type="button" class="clear" id="recover-password-button"onclick="recoverPassword()" disabled="true">Recuperar senha</button>
+        </div>
+        <div>
+            <button type="button" class="solid" id="login-button" disabled="true" onclick="login()">Entrar</button>
+        </div>
+        <div>
+            <button type="button" class="outline" onclick="register()">Registrar</button>
+        </div>
+    </form>
+
+<script src="./js/script.js"></script>
+<script src="./js/validations.js"></script>
+<script src="./js/loading.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="firebase-init.js"></script>
+
+</body>
+</html>
+
